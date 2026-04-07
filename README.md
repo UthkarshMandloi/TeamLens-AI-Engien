@@ -71,7 +71,9 @@ Due to file size constraints (100MB+), the fine-tuned LLaMA-3 LoRA adapters are 
 **To use the pre-trained model:**
 
 1. Download the model .zip file from our Google Drive:
-2. [👉 INSERT GOOGLE DRIVE LINK HERE](https://drive.google.com/drive/folders/1tbDfxcdj3yF9pOwIarEALsnImWYS_qvL?usp=sharing)
+    <p align="center">
+  <i><span style="font-size:30px;">[👉 GOOGLE DRIVE LINK HERE](https://drive.google.com/drive/folders/1tbDfxcdj3yF9pOwIarEALsnImWYS_qvL?usp=sharing)
+  </p>
 3. Extract the folder into the root directory of this repository.
 
 **To train the model yourself:**
@@ -80,7 +82,9 @@ Due to file size constraints (100MB+), the fine-tuned LLaMA-3 LoRA adapters are 
    python generate\_dataset.py
 
 2. Open our fully guided Google Colab Notebook:
-3. [👉 INSERT GOOGLE COLAB LINK HERE](https://colab.research.google.com/drive/1AqKONt9j8UpJpcOK0S539a5dFJA37u2i?usp=sharing)
+   <p align="center">
+  <i><span style="font-size:30px;">[👉 GOOGLE COLAB LINK HERE](https://colab.research.google.com/drive/1AqKONt9j8UpJpcOK0S539a5dFJA37u2i?usp=sharing)
+   </p>
 4. Upload the task\_extraction\_dataset.jsonl file to the Colab environment.  
 5. Follow the instructions in the notebook to fine-tune LLaMA-3 using Unsloth and export your own model weights.
 
