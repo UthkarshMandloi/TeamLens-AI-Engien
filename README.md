@@ -30,10 +30,10 @@ cd TeamLens-AI-Engien
 It is highly recommended to use a virtual environment to manage dependencies.
 
 ```bash
-python \-m venv venv  
-\# On Windows:  
-venv\\Scripts\\activate  
-\# On Mac/Linux:  
+python -m venv venv  
+# On Windows:  
+.\venv\Scripts\activate  
+# On Mac/Linux:  
 source venv/bin/activate 
 ```
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```
 ### **4\. Run the API Server**
 ```bash
-uvicorn main:app \--reload \--port 8000
+uvicorn main:app --reload --port 8000
 ```
 
 *The API will be live at http://localhost:8000.*
@@ -70,17 +70,19 @@ Due to file size constraints (100MB+), the fine-tuned LLaMA-3 LoRA adapters are 
 
 **To use the pre-trained model:**
 
-1. Download the model .zip file from our Google Drive: [👉 INSERT GOOGLE DRIVE LINK HERE](https://drive.google.com/drive/folders/1tbDfxcdj3yF9pOwIarEALsnImWYS_qvL?usp=sharing)
-2. Extract the folder into the root directory of this repository.
+1. Download the model .zip file from our Google Drive:
+2. [👉 INSERT GOOGLE DRIVE LINK HERE](https://drive.google.com/drive/folders/1tbDfxcdj3yF9pOwIarEALsnImWYS_qvL?usp=sharing)
+3. Extract the folder into the root directory of this repository.
 
 **To train the model yourself:**
 
 1. Run the dataset generation script locally to create the JSONL training data:  
    python generate\_dataset.py
 
-2. Open our fully guided Google Colab Notebook: [👉 INSERT GOOGLE COLAB LINK HERE](https://colab.research.google.com/drive/1AqKONt9j8UpJpcOK0S539a5dFJA37u2i?usp=sharing)
-3. Upload the task\_extraction\_dataset.jsonl file to the Colab environment.  
-4. Follow the instructions in the notebook to fine-tune LLaMA-3 using Unsloth and export your own model weights.
+2. Open our fully guided Google Colab Notebook:
+3. [👉 INSERT GOOGLE COLAB LINK HERE](https://colab.research.google.com/drive/1AqKONt9j8UpJpcOK0S539a5dFJA37u2i?usp=sharing)
+4. Upload the task\_extraction\_dataset.jsonl file to the Colab environment.  
+5. Follow the instructions in the notebook to fine-tune LLaMA-3 using Unsloth and export your own model weights.
 
 ##  **API Endpoints Reference**
 
@@ -92,8 +94,8 @@ Calculates the best team member for a specific task.
 
 ```bash
 {  
-  "task\_description": "Build the new database schema for the backend",  
-  "available\_members": \["divyansh", "anushka", "love", "uthkarsh"\]  
+  "task_description": "Build the new database schema for the backend",  
+  "available_members": ["divyansh", "anushka", "love", "uthkarsh"]  
 }
 ```
 
@@ -106,7 +108,7 @@ Generates a structured debrief from an array of chat messages.
 ```bash
 \[  
   {  
-    "user\_id": "uthkarsh",  
+    "user_id": "uthkarsh",  
     "message": "i have completed the AI model fine tuning",  
     "timestamp": "2024-10-27T10:00:00Z"  
   }  
@@ -123,7 +125,7 @@ Extracts task data from raw chat input.
 
 ```bash
 {  
-  "user\_id": "love",  
+  "user_id": "love",  
   "message": "/assign @divyansh to fix the navbar padding",  
   "timestamp": "2024-10-27T10:00:00Z"  
 } 
