@@ -1,2 +1,4 @@
 /.venv/
 teamlens_llama3_lora.zip
+/.idea/
+/__pycache__/
